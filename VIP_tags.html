@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>안녕하세요</title>    <!--상단 탭에 표시됨-->   
+    </head>
+    <body>
+        <h1>제목테그 글자 커진다...</h1>
+
+        <hr> <!-- 구분선 -->
+
+        <ul>
+            <li>안녕하세요</li>
+            <li>안녕하세요</li>
+            <li>안녕하세요</li>
+            <li>안녕하세요</li>
+        </ul>
+
+        <p>단락 테그... 딱히... 뭔가 없다..... 글자 내용 담을 때 쓰나??</p>
+
+        <!-- 절대적(압도적)으로 중요한 태그 1개 div, 많이 쓰이는 span -->
+        <div>굉장히 의미 없는 태그... 의미 없어서 중요함...css하고의 캐미...레이아웃 용</div>
+        <div>굉장히 의미 없는 태그... 의미 없어서 중요함...css하고의 캐미...</div>
+        <span>딱히 의미 없는데...  오른쪽으로 감... 특정 글자 컨트롤할때 씀</span>
+        <span>딱히 의미 없는데... 오른쪽으로 감...</span>
+        <span>딱히 의미 없는데... 오른쪽으로 감...</span>
+
+        <br><br><!-- 은근 중요... 왠만하면 최소화 -->
+        <!-- 중요태그 -->
+        <a href="./test.html">안녕하세요1</a><!-- 링크 태그... 페이지 이동 -->
+        <a href="test.html">안녕하세요2</a><!-- 링크 태그... 페이지 이동 -->
+        <a href="../../test.html">안녕하세요3</a><!-- 링크 태그... 페이지 이동 -->
+        <a href="https://www.naver.com">안녕하세요4</a><!-- 링크 태그... 페이지 이동 -->
+        <!-- 
+            1. 상대 경로
+             1) ./ = 현재 위치
+             2) 아무것도 없는 것 = 현재위치
+             3) ../ = 한단계 위로... (../../ = 두단계 위로)
+
+            2. 절대 경로
+            / == ... 백엔드 후에 다시...
+            http://... (요즘은 서버가 구현되어 있어서 s가 붙는다. https )
+        -->
+
+        <!-- 이미지 태그...-->
+        <a href="https://www.naver.com"><img src="./img/aaaaa.jpg" width="300"></a><br><!-- 이미지 넓이 자동 조절...-->
+        <img src="./img/aaaaa.jpg" width="300" height="300" alt="aldkjlfkdjlfk" title="한양대학교입니다."><br>
+        <!-- 이미지 넓이 높이 강제 변환(깨짐 주의)... title : 설명, alt : 로딩전까지 표시되거나 로딩 실패했을경우 나타나는 글자 -->
+        <img src="./img/0wedfaaa.jpg" alt="꽃 그림입니다">
+
+        <!-- table 격자 형태 -->
+        <table border="1">
+            <thead>
+                <tr> <!-- 행 -->
+                    <th>이름</th> <!-- 열 -->
+                    <td>나이</td>
+                    <td>점수</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>트레이서</td> 
+                    <td>24</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>한조</td> 
+                    <td>33</td>
+                    <td>99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 중요 : 입력 양식 -->
+        ID : <input type="text"><br> <!--예전스타일-->
+        <input type="text" placeholder="아이디를 입력하세요"><br> <!--요즘스타일-->
+        ID : <input type="email">
+        PW : <input type="password"><br>
+        색상 입력하세요 : <input type="color"><br>
+        생년 월일 : <input type="date"><br>
+        취미 : <!-- 다중 체크 가능-->
+               농구 <input type="checkbox">
+               축구 <input type="checkbox">
+               야구 <input type="checkbox">
+        <br>
+        성별 : <!-- name : 그루핑 된다. 네임 안넣으면 단일 한개만 선택 가능. -->
+            <input type="radio" name="gender">남
+            <input type="radio" name="gender" checked>여
+        <br>
+
+        지역 : 
+        <select>
+            <option>서울</option>
+            <option selected>부산</option>
+            <option>대전</option>
+            <option>대구</option>
+        </select>
+        <br>
+
+        사진등록 : <input type="file" accept="image/*" multiple>
+        <br>
+
+        제목 : <input type="text"><br>
+        내용 : 
+        <textarea rows="10" cols="50"></textarea>
+        <br>
+        <input type="button" value="버튼 입니다.">
+        <button>버튼입니다.</button>
+
+        <pre>
+
+        </pre>
+
+    </body>
+</html>

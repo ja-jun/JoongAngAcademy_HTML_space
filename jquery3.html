@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function test1(){
+                // jquery는 set get이 같은 함수... 값을 넣으면 set, 안 넣으면 get...
+                // set일때는 jquery 객체를 리턴함.(데코레이션 패턴 이용하려고), get일때는 값을 리턴..
+                $("#x1").text("반갑습니다..!!"); // set 압도적으로 중요하다!!!
+                var value = $("#x1").text(); // get... () 아무값도 안 넣으면... 리턴해준다. 
+                alert(value);
+
+                // dom 세팅...
+                // $("#x1").css("color","red").text("ddd").text().css(); // () 뒤에 . 안된다. get이기 때문에...
+            }
+
+            function test2(){
+                // 스타일
+                $("#x2").css("color","red").css("font-size","3em"); // set...
+                // 특정 시점에 칼라 값을 알고 싶을때, 스타일에서는 get을 거의 쓸 일이 없다.
+                var color = $("#x2").css("color");
+                alert(color);
+            }
+
+            function test3(){
+                // $("#x1").css("color","red").css("fontSize","3em").css("backgroundColor", "blue");
+                // 비어있는 객체를 넣을 수 있다. Jason
+                $("#x1").css({
+                    color : "red",
+                    fontSize : "3em",
+                    backgroundColor : "blue"
+                }).text("하하하하하");
+            
+            }
+
+            function test4(){
+                // 속성 컨트롤... setAttribute, getAttribute...
+                // $("#x2").attr("q","tttt"); // set...
+                $("#x2").attr("class","bigFont");
+                $("#img1").attr("src","bbb.jpg");
+
+                var value = $("#x2").attr("class"); // get...
+            }
+
+            function test5_1(){
+                // 사실상 속성 컨트롤... class만을 위한 api... setAttribute
+                // $("#x2").attr("class", "bigFont bgColor");
+                $("#x2").addClass("bigFont");   // addClass 는 setAttribute랑 비슷한 개념
+            }
+
+            function test5_2(){
+                $("#x2").addClass("bgColor");
+            }
+
+            function test5_3(){
+                $("#x2").removeClass("bigFont");
+            }
+
+            function test5_4(){
+                $("#x2").toggleClass("bgColor"); // 토글 :  있으면 지우고 없으면 넣고
+            }
+        </script>
+
+        <style>
+            .bgColor{
+                background-color: cadetblue;
+            }
+            .bigFont{
+                font-size: 3em;
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="img1" src="aaa.jpg">
+        <div id="x1">안녕하세요</div>
+        <div id="x2">안녕하세요</div>
+        <button onclick="test1()">테스트1</button>
+        <button onclick="test2()">테스트2</button>
+        <button onclick="test3()">테스트3</button>
+        <button onclick="test4()">테스트4</button>
+        <button onclick="test5_1()">테스트5_1</button>
+        <button onclick="test5_2()">테스트5_2</button>
+        <button onclick="test5_3()">테스트5_3</button>
+        <button onclick="test5_4()">테스트5_4</button>
+
+    </body>
+</html>

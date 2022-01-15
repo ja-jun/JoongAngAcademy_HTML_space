@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            // 선언...
+            function test1() {
+                console.log("test1 호출됨");
+            }
+
+            // 호출...
+            test1();
+            test1();
+            test1();
+
+            function test2(a, b) {
+                if(b==undefined) {
+                    console.log("undefined 컨트롤 가능하다..")
+                }
+                console.log("test2 호출됨 : " + a + " : " + b);
+            }
+
+            test2(1,2);
+            test2("안녕", 17);
+            test2(13); //????????, null과 undefined는 다르다.
+
+            function test3() {
+                return 13;
+            }
+
+            var value = test3();
+            console.log(value);
+
+            var value = test1(); // 리턴을 안했는데도 값을 받을 수 있다. 문법적으로 말이 안된다. => undefined
+            console.log(value);
+
+            function test4(a) { // 문법적으로 논리가 깨진다. 이렇게 하면 안된다. => undefined
+                if(a>10) {
+                    return "안녕하세요";
+                }
+            }
+
+            var result = test4(30);
+            console.log(result);
+            var result = test4(5);
+            console.log(result);
+
+            // 신경써야될 것.... 중요...
+            var aaa = test3(); //??? 자바에는 없고 파이선에는 있다. test3를 호출한 게 아니다. 함수를 변수에 담을 수가 있다. 
+            aaa(); // 자바는 인터페이스를 써야한다. 호출 한 것.
+
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

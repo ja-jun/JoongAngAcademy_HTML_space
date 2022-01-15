@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            // 선언
+            function test1(a,b,c) {
+                //...
+                console.log("클릭됨!!")
+            }
+
+            function test2() {
+                console.log("test2 호출됨");
+            }
+
+            function test3() {
+                console.log("aaaaaaa");
+            }
+
+            // 호출
+            // test1(1,2,3);
+            // test2();
+            // test3();
+
+            ///????
+            // var aaa = test2(); // 소괄호를 넣어야() 호출하는 것이다. 
+                                  // 의미는 test2를 호출하고 리턴된 값을 aaa에 넣겠다.
+            var aaa = test2; // (자바는 허용 안해서 인터페이스를 씀)
+                            // test2를 호출하는게 아니다. test2의 함수 주소를 aaa에다가 대입한다.
+            aaa();
+            test2();
+
+            aaa = test3;
+            aaa();
+
+            // 익명의 함수 정의(담을수있다) 할 수 있다...(엄청 중요!!! 엄청 많이 쓴다.)
+            var ttt = function () {
+                console.log("ggggggg"); // 선언은 했지만 호출 안해서 실행 안된다.
+            }
+
+            ttt(); // 호출해서 위의 콘솔이 실행된다. 
+
+            // ... 익명의 함수 씌여지는 경우...
+            function test10() {
+                console.log("test10이 호출됨...");
+            }
+
+            function test11() {
+                console.log("test11이 호출됨...");
+            }
+            
+            // some 다른사람이 만든 API 내부가 이렇게 되어 있다라는 가정..
+            function some(aaaa) {
+                console.log("some호출됨...")
+                aaaa();
+            }
+
+            // 콜백함수 - 내가 만들었지만 내가 호출하진 않음...
+            // 나는 다른 함수를 호출했는데 그 함수에서 내 함수를 호출하는 경우...
+            some(test10);  // 개념적으로 test10은 콜백함수가 된다. (문법적으로 콜백함수는 없음)
+            some(test11);  // 개념적으로 test11은 콜백함수가 된다.
+
+            some(function () {
+                console.log("익명함수 호출됨...!!!");
+            });
+
+        </script>
+
+        <style>
+            #x1{
+                width: 100px; 
+                height: 100px;
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="x1" onclick="test1(1,2,3)" onmouseover="test2()">안녕하세요</div>
+    </body>
+</html>

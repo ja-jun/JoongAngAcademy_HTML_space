@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+
+            function test1() {
+                alert("공부합니다.");
+            }
+
+            // map...??? object...???
+            // JSON(문법)
+
+            // 1. 오브젝트 형태... 필드...
+            var st1 = {}; // 비어있는 object 혹은 맵... ㅠㅠ
+
+            var st1 = {
+                score : 77,
+                name : '한조',
+                age : 15
+            };
+
+            st1.name = "트레이서";
+            console.log(st1.score);
+            console.log(st1.name);
+            console.log(st1.age);
+
+            // 2. 맵의 형태로 써보자... 키, 값
+            var map1 = {};
+            map1['score'] = 40; // put
+            console.log(map1['score']); // get
+
+            // 에라 모르겠다... 아래처럼 의도에 상관없이 섞어 쓰지 말자...
+            var some = {
+                a : 10, 
+                b : 20
+            };
+
+            console.log(some.a);
+            console.log(some['a']);
+
+            some.c = 30; // 신경쓸 것... 없으면 만든다.......
+            console.log(some.c);
+            console.log(some['c']);
+
+            some['d'] = 40;
+            console.log(some.d);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

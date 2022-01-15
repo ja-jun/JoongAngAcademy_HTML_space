@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function test1(){
+                // DOM 접근... getElement... #x1 .c1
+                var j1 = $("#x1"); // 리턴 해 주는 것 : Jquery Object(제이커리용 클래스의 인스턴스)
+                // x1.innerText = ""; // 안된다. 자바스크립트 엘리먼트가 아니다. (선택된 엘리먼트)
+                // x1.css("color", "red"); // Jquery Method... 내부에서는 e.style.color
+                var j2 = j1.css("color","red");
+                var j3 = j2.text("11111");
+                j3.css("backgroundColor", "blue");
+                // j2.text("11111");
+                // j1.text("11111");
+            }
+            // 데코레이션의 패턴, 핵심, 순서는 중요하지 않음
+            function test2(){ // 안되는 이유??? 체크??
+                // $("#x2").css("color", "red").css("font-size", "30px").text("1111");
+                $("#x1").css("color", "red").css("font-size", "30px").text("1111");
+       
+            }
+        </script>
+    </head>
+    <body>
+        <div id="x1" class="c1">안녕하세요...</div>
+        <div id="x2" class="c1">안녕하세요...</div>
+        <div class="c1">안녕하세요...</div>
+
+        <button onclick="test1()">테스트1</button>
+        <button onclick="test2()">테스트2</button>
+    </body>
+</html>

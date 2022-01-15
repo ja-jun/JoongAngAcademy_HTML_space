@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <style>
+            #x1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        </style>
+
+
+        <script>
+            //주석은 자바하고 같습니다.
+            function test() {
+                var qwer = document.getElementById("x1");
+                qwer.innerText = "반갑습니다.";
+            }
+
+            function test2() {
+                var tttt = document.getElementById("x1");
+                tttt.style.backgroundColor = "#00ff00";
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="x1" onmouseenter="test2();">안녕하세요.</div>
+
+        <button onclick="test();">반갑습니다.</button>
+    </body>
+</html>

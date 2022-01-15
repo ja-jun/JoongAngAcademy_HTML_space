@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function test1(){
+                // "안녕하세요"를 5번 출력 하자
+                for(i=0; i<5; i++) {
+                    console.log("안녕하세요");
+                }
+            }
+            
+            
+            function test2(){
+                // for문을 이용해서 1부터 76까지 합을 구하는 코드를 작성하자
+                var sum = 0;
+                for(i=1; i<=76; i++) {
+                    sum += i;
+                }
+                alert("답 : " + sum);
+            }
+
+            function test4() {
+                // 구구단 출력 6,7단 빼고.
+                for(x=2; x<=9; x++) {
+
+                    if(x == 7 || x == 8){ // 가장 효율적인 코드
+                        continue;
+                    } 
+                    for(y=1; y<=9; y++) {
+                     
+                       // if(x == 7 || x == 8) {
+                       //     break;
+                       // }
+                        var result = x * y;
+                       // if(x!=7 && x!=8){
+                        console.log(x + "X" + y + "=" + result);
+                    }
+                 // }
+                }
+            }
+
+            function test5() {
+                // 1부터 20까지의 정수 중에서 2 또는 3의 배수가 아닌 수의 총합
+
+                /* var sum = 0;
+                for(i=1; i<=200; i++) {
+
+                    if(i%2 == 0 || i%3 == 0) {
+                        continue;
+                    }
+                    sum += i;
+                }
+
+                console.log(sum);
+                */
+
+                var sum = 0;
+                for(i=1; i<=200 ; i++) {
+
+                    if(!(i%2 == 0 || i%3 == 0)) {
+                        sum += i;
+                    }    
+                }
+
+                console.log(sum);
+                
+            } 
+            
+            function test6() {
+                var sum = 0;
+                /* for(i=1; true; i++) {
+                    if(i%2 ==1) {
+                        sum += i;
+                    } else {
+                        sum -= i;
+                    }
+
+                    if(sum>=100) {
+                        console.log(i);
+                        break;
+                    }
+                } */
+
+                var weight = -1;
+                for(i=1; true; i++) {
+
+                    weight = weight*-1;
+                    sum += i*weight;
+
+                    if(sum>=100) {
+                        console.log(i);
+                        break;
+                    }
+                }
+            }
+
+            function test9() {
+                /* 1+(1+2)+(1+2+3)+....(1+...+10) */
+                // 1번 정답...문제 그대로 푸는법
+                var sum = 0
+                for (x=1; x<=10; x++) {
+                    for(y=1; y<=10; y++) {
+                        sum+=y;
+                    }
+                }
+                /*
+                // 2. 정답.. 변수를 적절히 사용.....
+                var sum = 0
+                var tempSum=0;
+                for(i=1; i<=10; i++) {
+                    tempSum +=i;
+                    sum += tempSum;
+                }
+                
+                // 3. 재구성...
+                var sum = 0;
+                for(i=1; i<=10; i++) {
+                    sum += i*(11-i);
+                } */
+                console.log(sum); 
+            }
+
+            function test11() {
+                // 피나보치... 문제... 변수의  적절한 활용... 소스코드 확인????
+                var left = 1;
+                var right = 1;
+                var result = left + right;
+
+                for(i=3; i<=10; i++) {
+                    result = left + right;
+
+                    left = right;
+                    right = result;
+                }
+                console.log(result);
+                
+            } 
+
+            function test12(){ // 난이도가 어려워서 넘어가도 됨.
+                // x=8878 
+                // 8878/10 = 887
+                // 8878%10 = 8
+                var count=0;
+                for(x=1; x<=10000; x++) {
+                    var temp = x;
+                    while(temp !=0) {
+                        if(temp%10==8){
+                            count++;
+                        }
+                        temp = parseInt(temp/10);
+                    }
+                }
+
+                console.log(count);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="test1()">1번 문제</button>
+        <button onclick="test2()">2번 문제</button>
+        <button onclick="test4()">4번 문제</button>
+        <button onclick="test5()">5번 문제</button>
+        <button onclick="test6()">6번 문제</button>
+        <button onclick="test9()">9번 문제</button>
+        <button onclick="test11()">11번 문제</button>
+        <button onclick="test12()">12번 문제</button>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            var a = 13;
+
+            if(a > 5) {
+
+            } else if(a > 10) {
+
+            } else {
+
+            }
+
+            var a = 3;
+            switch(a){
+                case 1:
+                    console.log("1입니다.");
+                    break;
+                case 2:
+                    console.log("2입니다.");
+                    break;
+                default:
+                    console.log("이도저도 아닙니다.")
+
+            }
+
+            for(var i=1; i <= 10; i++) {
+                console.log(i);
+            }
+
+            var i= 0;
+            while(true) {
+                if(i == 10){
+                    console.log("탈출");
+                    break;
+                }
+                i++;
+            }
+
+            // 배열.... 
+            var arr = [1,2,3,4,5,6,655];
+
+            // 향상된 for문.. 2가지... 옛날 버전... es6버전...
+
+            // 옛날 버전 - 좀 애매함;;; in
+            for(var i in arr) {
+                console.log(arr[i]);
+            }
+
+            // es6 향상된 for문.. 대부분의 언어하고 동일 of (이클립스에선 틀렸다고 나옴.)
+            for(var data of arr) {
+                console.log(data);
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

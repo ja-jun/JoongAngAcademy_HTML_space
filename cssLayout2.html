@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #x1{
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                float: left;
+                /* border: 1px solid black; 이건 안된다. 크기를 잡아 먹는다. */
+            }
+            #x2{
+                background-color: red;
+                width: 100px;
+
+                float: left;
+            }
+            #x3{
+                background-color: green;
+                width: 100px;
+                height: 100px;
+                float: left;
+            }
+
+            .b1{
+                background-color: blueviolet;
+                width: 100px;
+                height: 100px;
+                float: left;
+            }
+
+            #wrapper{
+                width: 800px;
+                overflow: hidden; /* float 속성이 있는 박스들을 감싸는 박스에 현 속성 설정하면 자동으로 높이 인지해서 조절한다 */
+                background-color: cornflowerblue;
+            }
+
+            #bottomWrapper{
+                width: 800px;
+                background-color: darkgray;
+                overflow: hidden;
+            }
+        </style> 
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="x1">a</div>
+            <div id="x2">
+                <div>안녕하세요</div>
+                <div>안녕하세요</div>
+                <div>안녕하세요</div>
+            </div>
+            <div id="x3">c</div>
+
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+        </div>
+
+        <div id="bottomWrapper">
+            <div class="b1"></div>
+            <div class="b1"></div>
+            <div class="b1"></div>
+        </div>
+    </body>
+</html>

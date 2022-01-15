@@ -1,0 +1,64 @@
+* {margin: 0px; padding: 0px;}
+
+ul {
+    list-style: none;
+}
+
+/* pallette */
+.blackText { color: #333; font-size: 20px; font-weight: bold; }
+.grayText { color: #444; font-size: 12px; }
+.lightTurq { background-color: #12b9b2; }
+.darkTurq { background-color: #06b5b8; font-weight: bold; }
+.lightTurqText { color: #12b9b2; font-size: 17px; font-weight: bold; }
+.darkTurqText { color: #06b5b8; font-weight: bold; }
+
+.fleft { float: left; }
+.fright { float: right; }
+
+/* outerframe */
+div.outerdiv { width: 1100px; margin: 0 auto; height: 1100px; }
+
+div.innerdiv { width: 97%; margin: 0 auto; height: 990px; background-color: #fff; }
+
+header { width: 100%; overflow: hidden; height: auto;}
+header div .logo { margin: 20px; }
+header div .catchPharase { margin-top: 37px; }
+header div .headerBtn { margin-top: 37px; margin-right: 10px; }
+header div .headerBtn li { margin-right: 3px; margin-left: 3px; }
+
+.section { width: 100%; overflow: hidden; height: auto; }
+
+.section .big5Menu ul { width: 100%; overflow: hidden; height: auto; }
+.section .big5Menu ul li { width: 20%; height: auto; padding-top: 15px; padding-bottom: 10px; text-align: center;}
+
+
+.section .big3Ban { width: 100%; overflow: hidden; height: auto; text-align: center; }
+.section .big3Ban ul { width: 95%; overflow: hidden; height: auto; margin: 0 auto; background: #4ba5a9; }
+.section .big3Ban ul li { width: 33%; margin: 5px 0;} 
+.section .big3Ban ul li:nth-child(2) { border-right: 1px solid #429085; border-left: 1px solid #429085;}
+.section .big3Ban ul li img.needMargin { margin-top: 10px;}
+
+.section .big3Contents { width: 100%; overflow: hidden; height: auto; }
+.section .big3Contents div { width: 95%; overflow: hidden; height: auto; margin: 0 auto; padding: 20px 0; border-bottom: 3px solid #bbb; }
+.section .big3Contents div ul { width: 33.333333%; }
+.section .big3Contents div ul li { width: 90%; height: auto; padding: 0 5px; }
+.section .big3Contents div ul li:first-child { margin-bottom: 5px; }
+.section .big3Contents div ul li ul { width: 100%; overflow: hidden; height: auto; }
+.section .big3Contents div ul li ul li { height: auto; overflow: hidden; margin: 3px 0; }
+.section .big3Contents div ul li ul li span { }
+
+.section .small6Contents { width: 100%; overflow: hidden; height: auto;  }
+.section .small6Contents div { width: 95%; overflow: hidden; height: auto; margin: 0 auto; padding: 20px 0 30px 0; border-bottom: 4px solid #06b5b8;}
+.section .small6Contents div ul { width: 16.66666%; }
+.section .small6Contents div ul li:first-child { padding-left: 12px; margin-bottom: 5px; }
+.section .small6Contents div ul li { margin: 3px 0; }
+
+footer { width: 100%; overflow: hidden; height: auto; padding-top: 30px; }
+footer div { width: 95%; overflow: hidden; height: auto; margin: 0 auto; }
+footer div div.leftSec { width: 55%; }
+footer div div.leftSec ul { width: 100%; overflow: hidden; height: auto; margin-top: 10px; }
+footer div div.leftSec ul:first-child li { margin: 0 4px; }
+footer div div.rightSec { width: 40%; }
+footer div div.rightSec div { text-align: right; margin: 5px 0; }
+footer div div.rightSec div select { width: 100px; height: 25px; margin-right: 25px; }
+footer div div.rightSec div ul li { margin-right: 3px; }

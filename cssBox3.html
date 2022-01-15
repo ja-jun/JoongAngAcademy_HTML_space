@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .x1{
+               border: 1px solid purple; 
+               display: block; /* 핵심은 block => 레이아웃 잡는데 쓰이기 때문에 */
+               width: 300px; /* block은 너비 조절이 가능하다 크기를 지정하는 순간 완벽하게 고정이 된다 굉장히 위험해 질수도 있다 튕겨나간다. 잘써야한다 */
+               height: 300px; /* 왠만하면 높이는 고정하지 말것 */
+            }
+            .x2{
+               border: 1px solid red; 
+               display: inline;
+               width: 400px; /* inline은 너비 조절이 안된다 그래서 잘 안쓴다 */
+               height: auto; /* 높이의 기본은 자동으로 내용만큼 커진다(중요) */
+            }
+         </style>
+    </head>
+    <body>
+        <div class="x1">안녕하세요1<br>안녕하세요1</div>
+        <div class="x1">안녕하세요1</div>
+        <div class="x1"></div> <!-- 높이가 0 -->
+        <div class="x2">안녕하세요1</div>
+
+    </body>
+</html>

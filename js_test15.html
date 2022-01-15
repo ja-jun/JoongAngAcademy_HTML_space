@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <style>
+            div{
+                border: 1px solid black;
+            }
+        </style>
+
+        <script>
+            // 1. 부모찾기 2가지 1) parentElement+querySelector, 2) closest
+            function test1(eee){ // 핵심 this... 어랴 태그쪽 볼것... this 넘겨준다.
+                // console.log("호출됨") // 브레이크 포인트 잡으려고 함
+                var p = eee.parentElement; // 핵심 ..parentElementparentElementparentElementparentElement 계속 부모 조상까지 올라갈 수 있다.
+                var target = p.querySelector(".title");
+                target.innerText = "qqqqqq";
+            }
+
+            function test2(eee){
+                // console.log("eslkfj");
+                var x = eee.closest(".content"); // (중요) eee에서 가장 가까운 부모 중 클래스명이 content인 엘리먼트를 리턴(찾아라)
+                                                 // 가장 많이 쓸 것 중 하나임. 
+                x.remove(); //... 부모를 찾아서 삭제
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="board1">
+            <div class="content" style="display: flex;">
+                <div>1</div>
+                <div class="title"> 안녕하세요 </div>
+                <div class="nick"> 한조 </div>
+                <div onclick="test2(this)"> 삭제 </div>
+                <div onclick="test1(this)"> 테스트 </div> 
+            </div>
+        </div>
+        
+        <div id="board2">
+            <div class="content" style="display: flex;">
+                <div>2</div>
+                <div class="title"> 안녕하세요 </div>
+                <div class="nick"> 한조 </div>
+                <div onclick="test2(this)"> 삭제 </div>
+                <div onclick="test1(this)"> 테스트 </div>
+            </div>
+        </div>
+
+        <div id="board3">
+            <div class="content" style="display: flex;">
+                <div>3</div>
+                <div class="title"> 안녕하세요 </div>
+                <div class="nick"> 한조 </div>
+                <div onclick="test2(this)"> 삭제 </div>
+                <div onclick="test1(this)"> 테스트 </div>
+            </div>
+        </div>
+
+        <div id="board4">
+            <div class="content" style="display: flex;">
+                <div>4</div>
+                <div class="title"> 안녕하세요 </div>
+                <div class="nick"> 한조 </div>
+                <div onclick="test2(this)"> 삭제 </div>
+                <div onclick="test1(this)"> 테스트 </div>
+            </div>
+        </div>
+
+    </body>
+</html>

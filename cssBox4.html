@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #x1{
+                border: 100px solid red;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 100px;
+                padding-top: 100px;
+            }
+            #x2{
+                border: 100px solid green;
+                width: 200px;
+                height: 200px;
+                margin-top: 50px; /* 마진은 공유함. 제일 큰걸로 적용됨 */
+            }
+
+            body{
+                margin: 0px; /* 모든 태그가 마진하고 패딩이 걸려있다. */
+            }
+
+            *{ /* 디자이너들은 이렇게 빼고 시작한다 */
+                margin: 0px;
+                padding: 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="x1">aaa</div>
+        <div id="x2">bbb</div>
+        
+    </body>
+</html>

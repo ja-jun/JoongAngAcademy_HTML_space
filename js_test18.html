@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <script>
+            // css 스타일 컨트롤... 주의사항 값은 문자여야 된다.
+            // css를 다 클래스로 한다면 이것보단 setAttribute가 더 좋다.
+            function test1(){
+                var e = document.getElementById("x1");
+                e.style.backgroundColor = "red"; 
+            }
+            function test2(){
+                var e = document.getElementById("x1");
+                // e.style.fontSize = 10; // 숫자 절대 안됨.
+                e.style.fontSize = "10em";
+            }
+            function test3(){
+                var e = document.getElementById("x1");
+                e.style.width = "100px";
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="x1">안녕하세요</div>
+
+        <button onclick="test1()">테스트1</button>
+        <button onclick="test2()">테스트2</button>
+        <button onclick="test3()">테스트3</button>
+        <button onclick="test4()">테스트4</button>
+        <button onclick="test5()">테스트5</button>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            // 콜백 함수... 이런 방식은 잘 안쓴다.
+            /* function test1() {
+                console.log("안녕하세요");
+            } 
+            setTimeout(test1 , 5000); // 타이머 5초(5000밀리세컨즈) 후에 함수 실행됨. */
+
+            // 콜백 함수 일반적으로 이렇게 쓴다. 
+            setTimeout(function() {
+                console.log("반갑습니다....!!!");
+                console.log("안녕하세요");
+                setTimeout(function(){
+                    console.log("하하하하하");
+                }, 3000);
+            }, 5000); // 자바는 인터페이스 클래스 생성 및 상속받아서... 2.익명으로 생성... 3. 람다식으로 진화함.
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <script>
+            // DOM... Attribute... 속성 컨트롤... ID class 등등 다 바꿀수 있다.
+            // get : 키만 넣으면 값이 나온다.
+            // set : 키와 값을 넣어야 한다.
+            // 가장 많이 쓰는 곳 : UI 클래스 바꿀때
+            function test1(){
+                var e = document.getElementById("x1");
+
+                e.setAttribute("class", "redColor bigFont");
+            }
+
+            function test2(){
+                var e = document.getElementById("x1");
+
+                var value = e.getAttribute("class");
+                alert(value);
+            }
+
+        </script>
+        
+        <style>
+            .blueColor{
+                color:blue;
+            }
+
+            .redColor{
+                color: red;
+            }
+            .bigFont{
+                font-size: 5px;
+            }
+
+            .smallFont{
+                font-size: 30px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="x1" class="smallFont blueColor">안녕하세요</div>
+        <button onclick="test1()">테스트1</button>
+        <button onclick="test2()">테스트2</button>
+
+    </body>
+</html>
